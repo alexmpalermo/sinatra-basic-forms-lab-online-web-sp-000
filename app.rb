@@ -14,7 +14,7 @@ class App < Sinatra::Base
   @new_puppy = Puppy.new(params[:data])
   @new_puppy.save
   
-  erb :display_puppy
+  redirect "/display_puppy"
   end
   
 end
