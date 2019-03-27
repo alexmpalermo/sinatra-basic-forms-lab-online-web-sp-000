@@ -11,10 +11,10 @@ class App < Sinatra::Base
   end
 
   post '/puppy' do
-  @new_puppy = Puppy.new(params[:data])
-  @new_puppy.save
+  @new_puppy = Puppy.new
+  @new_puppy.name = 
   
-  redirect "/display_puppy"
+  erb :display_puppy
   end
   
 end
